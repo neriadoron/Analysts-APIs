@@ -29,7 +29,7 @@ docker compose up -d
 ```
 
 This will start:
-- `mongo` on port **27018**
+- `mongo` on port **27020**
 
 You can stop it later with:
 
@@ -66,7 +66,7 @@ You can run it multiple times; it will clear the collection first.
 ## 4. Run the API
 
 ```bash
-export MONGO_URI="mongodb://localhost:27018"  # Windows: set MONGO_URI=...
+export MONGO_URI="mongodb://localhost:27020"  # Windows: set MONGO_URI=...
 python app.py
 ```
 
