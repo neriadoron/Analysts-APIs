@@ -41,18 +41,5 @@ def load_orders():
     print("Done.")
 
 
-def create_indexes():
-    client = MongoClient(MONGO_URI)
-    db = client["workshop"]
-    collection = db["orders"]
-
-    print("Creating indexes...")
-    collection.create_index([("customer_id", ASCENDING)], name="idx_customer_id")
-    collection.create_index([("order_date", ASCENDING)], name="idx_order_date")
-    collection.create_index([("country", ASCENDING), ("order_date", ASCENDING)], name="idx_country_date")
-    print("Indexes created.")
-
-
 if __name__ == "__main__":
     load_orders()
-    create_indexes()
